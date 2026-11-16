@@ -1,0 +1,204 @@
+/* Configuración general con scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcf1f1;
+    margin: 0;
+    color: #333;
+}
+
+/* Estructura Principal de Pantalla (Sidebar + Contenido) */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Estilo del Menú al Costado (Sidebar) */
+.sidebar {
+    width: 260px;
+    background-color: #8b0000; /* Rojo Oscuro / Vinotinto */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    box-sizing: border-box;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-brand h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.5rem;
+    color: #ffcccc;
+}
+
+.sidebar-brand p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #ff9999;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.sidebar-menu a {
+    color: #f8d7da;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-menu a:hover {
+    background-color: #a81c1c;
+    color: #ffffff;
+    padding-left: 16px;
+}
+
+.sidebar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #f1b0b7;
+}
+
+/* Área de Contenido Principal */
+.main-content {
+    margin-left: 260px; /* Deja espacio para el menú lateral fijo */
+    flex: 1;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.top-header {
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(139, 0, 0, 0.05);
+    border-left: 5px solid #b30000;
+}
+
+.top-header h1 {
+    margin: 0 0 5px 0;
+    color: #8b0000;
+    font-size: 1.8rem;
+}
+
+.top-header p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Cuadrícula de Tarjetas (Dashboard) */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjetas individuales de los problemas */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 4px solid #b30000;
+    scroll-margin-top: 20px; /* Espacio al hacer clic en el menú lateral */
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #8b0000;
+    border-bottom: 2px solid #fde8e8;
+    padding-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+    color: #555;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #d46a6a;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #b30000;
+    box-shadow: 0 0 4px rgba(179, 0, 0, 0.3);
+}
+
+button {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #8b0000;
+}
+
+/* Caja de Resultados */
+.result {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fdf2f2;
+    border-left: 4px solid #b30000;
+    font-size: 0.9rem;
+    border-radius: 0 4px 4px 0;
+    min-height: 24px;
+    word-break: break-word;
+    color: #4a1515;
+}
+
+/* Adaptabilidad para pantallas pequeñas (móviles / tablets) */
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+}

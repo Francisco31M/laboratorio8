@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación Individual - Programación Estructurada</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-layout">
+     <!--menu del cosatdo donde mustra las opciones a seleccionar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>UTP Lab</h2>
+                <p>Programación Estructurada</p>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#prob1">1. Suma de Tres Valores</a>
+                <a href="#prob2">2. Cuadrado de un Número</a>
+                <a href="#prob3">3. Promedio de Calificaciones</a>
+                <a href="#prob4">4. Conversión de Metros</a>
+                <a href="#prob5">5. Comparación de Valores</a>
+            </nav>
+            <div class="sidebar-footer">
+                <small><strong>Estudiante:</strong> [Tu Nombre]</small><br>
+                <small>Entrega: 16/11/2026</small>
+            </div>
+        </aside>
+
+       
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Panel de Problemas a solucionar </h1>
+                <p>Seleccione o desplácese por el menú lateral para interactuar con cada solución.</p>
+            </header>
+
+            <div class="dashboard">
+
+              <!--problema 1 -->
+                <div class="card" id="prob1">
+                    <div>
+                        <h3>1. Suma de tres valores</h3>
+                        <div class="form-group">
+                            <label for="p1_v1">Número 1:</label>
+                            <input type="number" id="p1_v1" placeholder="Ingrese el primer número">
+                        </div>
+                        <div class="form-group">
+                            <label for="p1_v2">Número 2:</label>
+                            <input type="number" id="p1_v2" placeholder="Ingrese el segundo número">
+                        </div>
+                        <div class="form-group">
+                            <label for="p1_v3">Número 3:</label>
+                            <input type="number" id="p1_v3" placeholder="Ingrese el tercer número">
+                        </div>
+                        <button onclick="sumarTresValores()">Sumar Valores</button>
+                    </div>
+                    <div class="result" id="p1_res">Resultado aparecerá aquí...</div>
+                </div>
+
+                <!--problema 2 -->
+                <div class="card" id="prob2">
+                    <div>
+                        <h3>2. Cuadrado de un número</h3>
+                        <div class="form-group">
+                            <label for="p2_num">Número:</label>
+                            <input type="number" id="p2_num" placeholder="Ingrese un número">
+                        </div>
+                        <button onclick="calcularCuadrado()">Calcular cuadrado</button>
+                    </div>
+                    <div class="result" id="p2_res">Resultado aparecerá aquí...</div>
+                </div>
+
+                <!--problema 3 -->
+                <div class="card" id="prob3">
+                    <div>
+                        <h3>3. Promedio de calificaciones</h3>
+                        <div class="form-group">
+                            <label for="p3_nombre">Nombre del estudiante:</label>
+                            <input type="text" id="p3_nombre" placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="p3_n1">Calificación 1:</label>
+                            <input type="number" step="0.01" id="p3_n1" placeholder="Nota 1">
+                        </div>
+                        <div class="form-group">
+                            <label for="p3_n2">Calificación 2:</label>
+                            <input type="number" step="0.01" id="p3_n2" placeholder="Nota 2">
+                        </div>
+                        <div class="form-group">
+                            <label for="p3_n3">Calificación 3:</label>
+                            <input type="number" step="0.01" id="p3_n3" placeholder="Nota 3">
+                        </div>
+                        <button onclick="calcularPromedio()">Calcular promedio</button>
+                    </div>
+                    <div class="result" id="p3_res">Resultado aparecerá aquí...</div>
+                </div>
+
+                 <!--problema 4 -->
+                <div class="card" id="prob4">
+                    <div>
+                        <h3>4. Conversión de unidades (Metros)</h3>
+                        <div class="form-group">
+                            <label for="p4_metros">Valor en metros:</label>
+                            <input type="number" step="any" id="p4_metros" placeholder="Ej. 500">
+                        </div>
+                        <button onclick="convertirMetros()">Convertir unidades</button>
+                    </div>
+                    <div class="result" id="p4_res">Resultado aparecerá aquí...</div>
+                </div>
+
+                 <!--problema 5 -->
+                <div class="card" id="prob5">
+                    <div>
+                        <h3>5. Comparación de dos valores</h3>
+                        <div class="form-group">
+                            <label for="p5_a">Primer número:</label>
+                            <input type="number" id="p5_a" placeholder="Ej. 15">
+                        </div>
+                        <div class="form-group">
+                            <label for="p5_b">Segundo número:</label>
+                            <input type="number" id="p5_b" placeholder="Ej. 8">
+                        </div>
+                        <button onclick="compararValores()">Comparar valores</button>
+                    </div>
+                    <div class="result" id="p5_res">Resultado aparecerá aquí...</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+  
+    <script src="script.js"></script>
+</body>
+</html>
